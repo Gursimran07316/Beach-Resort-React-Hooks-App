@@ -1,6 +1,7 @@
 # REACT BEACH RESORT
 
-> App that finds song lyrics using React and the Musixmatch API.
+> A beach resort app with filterable rooms
+
 
 
 ## Quick Start
