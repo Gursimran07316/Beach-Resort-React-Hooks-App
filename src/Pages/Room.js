@@ -1,17 +1,14 @@
-import React,{useEffect,useState,useContext} from 'react'
+import React,{useContext} from 'react'
 import {GloabalContext} from '../context/GlobalState'
 import defaultImg from "../images/room-1.jpeg"
 import StyledHero from '../Components/StyledHero'
 import Banner from '../Components/Banner'
-import {Link} from 'react-router-dom'
- const Room = (props) => {
-     const[slug,setSlug]=useState('');
-     useEffect(()=>{
-setSlug(props.match.params.slug)
-     },[props.match.params.slug])
+import {Link,useParams} from 'react-router-dom'
+ const Room = () => { 
+const { slug } = useParams();
 const{getRoom}=useContext(GloabalContext)
 const room=getRoom(slug)
-// console.log(room)
+
 if(!room){
     return (
         <div className="error">
